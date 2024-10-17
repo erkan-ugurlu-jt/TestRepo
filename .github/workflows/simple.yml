@@ -17,3 +17,6 @@ jobs:
       - name: Run a multi-line script
         run:
           echo "${{ github.workspace }}"
+      - name: Run tests
+        run: xcodebuild test -scheme Test -project Test.xcodeproj -destination 'platform=iOS Simulator,name=iPhone 15 Pro,OS=17.5'
+
